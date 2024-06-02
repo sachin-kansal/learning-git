@@ -2,12 +2,12 @@ name: myfirstworkflow
 on: [push] # on which event
 jobs:
   build:
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
     steps:
       - name: checkout repo
         uses: actions/checkout@v3
       - name: setup Python
-        uses: action/setup-python@v4
+        uses: actions/setup-python@v4
         with:
           python-version: '3.10'
       - name: Install dependencies
@@ -15,7 +15,7 @@ jobs:
           python - pip install --upgrade pip
           pip install pyyaml
       - name: Run Feed generator
-        run: python  app.py
+        run: python  app1.py
       - name: push repo
         run: |
           git config user.name github-actions
