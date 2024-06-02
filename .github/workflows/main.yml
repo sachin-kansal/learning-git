@@ -1,0 +1,25 @@
+name: myfirstworkflow
+on: [push] # on which event
+jobs:
+  build:
+    runs-on: ubuntu:latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v3
+      - name: setup Python
+        uses: action/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: |
+          python - pip install --upgrade pip
+          pip install pyyaml
+      - name: Run Feed generator
+        run: python  app.py
+      - name: push repo
+        run: |
+          git config user.name github-actions
+          git config user.email sachin.kansal456@gmail.com
+          git add .
+          git commit -m "modified feed"
+          git push
