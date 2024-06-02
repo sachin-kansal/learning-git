@@ -20,6 +20,4 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email sachin.kansal456@gmail.com
-          git add .
-          git commit -m "modified feed"
           git push
