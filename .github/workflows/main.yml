@@ -15,7 +15,7 @@ jobs:
           python - pip install --upgrade pip
           pip install pyyaml
       - name: Run Feed generator
-        run: python  app.py
+        run: python  app1.py
       - name: push repo
         run: |
           git config user.name github-actions
