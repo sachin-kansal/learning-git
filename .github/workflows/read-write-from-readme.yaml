@@ -19,7 +19,7 @@ jobs:
           git checkout -b bot-branch
           git add .
           git commit -m "adding bot file"
-          git push
+          git push --set-upstream origin bot-branch
         shell: bash
       #- name: filterfromreadme
       #  run: |
