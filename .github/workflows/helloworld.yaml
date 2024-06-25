@@ -1,0 +1,25 @@
+name: "Hello world"
+on:  # events
+  push:
+    branches:
+     - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:  # add the manual buttin to trigger to run the runner
+
+jobs:
+  hello: # job1 name
+   runs-on: ubuntu-latest # git machine 
+   steps: # steps 
+     - uses: actions/checkout@v2  #actions - checkout - version 2
+     - name: hello world
+       run: echo "Hello world"
+       shell: bash
+  goodbye:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v2
+     - name: goodbye world
+       run: echo "Goodbye world"
+       shell: bash
