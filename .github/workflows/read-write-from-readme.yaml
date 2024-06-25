@@ -14,6 +14,8 @@ jobs:
       - name: readfromreadme
         run: |
           cat README.md > ./my-bot-readmefile.txt
+          git config --global user.email "bot@gmail.com"
+          git config --global user.name "gitbot"
           git checkout -b bot-branch
           git add .
           git commit -m "adding bot file"
