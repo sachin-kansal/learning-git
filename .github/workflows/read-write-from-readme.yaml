@@ -14,6 +14,10 @@ jobs:
       - name: readfromreadme
         run: |
           cat README.md > ./my-bot-readmefile.txt
+          git checkout -b bot-branch
+          git add .
+          git commit -m "adding bot file"
+          git push
         shell: bash
       #- name: filterfromreadme
       #  run: |
