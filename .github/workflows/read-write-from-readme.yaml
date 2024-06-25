@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: readfromreadme
         run: |
-          cat README.md > ./my-bot-readmefile.txt
+          cat sachin-kansal/learning-git/README.md > ./my-bot-readmefile.txt
         shell: bash
       #- name: filterfromreadme
       #  run: |
