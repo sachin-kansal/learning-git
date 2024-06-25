@@ -1,0 +1,19 @@
+name: read-writefrom read-write from read me
+on:
+  push:
+    branches: [release**]
+    paths:
+      - ./READMR.md
+  workflow_dispatch:
+
+jobs:
+  read:
+    runs-on: ubuntu-latest
+    steps:
+      - name: readfromreadme
+        run: |
+          cat ./README.md > ./my-bot-readmefile.txt
+        shell: bash
+      #- name: filterfromreadme
+      #  run: |
+          

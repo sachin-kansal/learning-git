@@ -19,7 +19,6 @@ jobs:
   goodbye:
     runs-on: ubuntu-latest
     steps:
-     - uses: actions/checkout@v2
      - name: goodbye world
        run: echo "Goodbye world"
        shell: bash
