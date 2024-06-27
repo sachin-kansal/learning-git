@@ -13,7 +13,7 @@ jobs:
       - name: Install dependencies
         run: |
           python - pip install --upgrade pip
-          pip install pyyaml
+          pip install pyyaml pandas
       - name: Run Feed generator
         env:
           reponame: ${GITHUB_REPOSITORY}
