@@ -1,5 +1,5 @@
 name: myfirstworkflow
-on: [push] # on which event
+on: [create]
 jobs:
   build:
     runs-on: ubuntu-latest
