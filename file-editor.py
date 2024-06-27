@@ -5,13 +5,13 @@ import sys
 import pandas as pd
 
 def generic_files_rename(tenantid,i):
-    dest='folder/hellomot-'+ i +'.yaml'
-    newname="folder/"+ tenantid + "-"+i +".yaml"
+    dest = os.path.join('folder','hellom-'+ i +'.yaml')
+    newname=os.path.join('foledr',tenantid+i+'.yaml')
     try:
         os.rename(dest,newname) # changing file name
         file = fileinput.FileInput(newname,inplace=True) # 
         for line in file:
-            a=line.replace("hellomot",tenantid)
+            a=line.replace("hellom",tenantid)
             print(a,end='')
         fileinput.close()
     except FileNotFoundError:
