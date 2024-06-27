@@ -11,7 +11,7 @@ def generic_files_rename(tenantid,i):
         os.rename(dest,newname) # changing file name
         file = fileinput.FileInput(newname,inplace=True) # 
         for line in file:
-            a=line.replace("brajesh",tenantid)
+            a=line.replace("hellomot",tenantid)
             print(a,end='')
         fileinput.close()
     except FileNotFoundError:
