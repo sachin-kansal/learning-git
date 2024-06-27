@@ -18,6 +18,7 @@ jobs:
       - name: Run Feed generator
         run: |
           python file-editor.py $GITHUB_REPOSITORY
+          ls -R
           echo $GITHUB_REPOSITORY
       # - name: push repo
       #   run: |
