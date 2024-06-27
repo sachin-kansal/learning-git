@@ -5,7 +5,7 @@ import sys
 import pandas as pd
 
 def generic_files_rename(tenantid,i):
-    dest = "folder/hellom-rep.yaml"
+    dest = os.path.join('foledr','hellom-rep.yaml')
     newname=os.path.join('foledr',tenantid+i+'.yaml')
     try:
         os.rename(dest,newname) # changing file name
