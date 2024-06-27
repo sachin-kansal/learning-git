@@ -17,7 +17,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run Feed generator
         run: |
+          pwd
           python file-editor.py $GITHUB_REPOSITORY
+          pwd
           ls -R
           echo $GITHUB_REPOSITORY
       # - name: push repo
