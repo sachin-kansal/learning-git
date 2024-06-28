@@ -18,11 +18,11 @@ jobs:
         run: |
           python file-editor.py ritu
           echo $GITHUB_REPOSITORY
-      # - name: push repo
-      #   run: |
-      #     git config user.name github-actions
-      #     git config user.email sachin.kansal456@gmail.com
-      #     git checkout -b bot-branch
-      #     git add .
-      #     git commit -m "adding bot file"
-      #     git push --set-upstream origin bot-branch
+      - name: push repo
+        run: |
+          git config user.name github-actions
+          git config user.email sachin.kansal456@gmail.com
+          git checkout -b bot-branch
+          git add .
+          git commit -m "adding bot file"
+          git push --set-upstream origin bot-branch
