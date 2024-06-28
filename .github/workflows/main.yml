@@ -1,5 +1,7 @@
 name: myfirstworkflow
-on: [create]
+on: 
+  create:
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,7 +16,7 @@ jobs:
         run: |
           python - pip install --upgrade pip
           pip install pyyaml pandas
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4.1.7
       - name: Run Feed generator
         run: |
           python file-editor.py $GITHUB_REPOSITORY
