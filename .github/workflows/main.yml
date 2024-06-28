@@ -16,9 +16,7 @@ jobs:
           pip install pyyaml pandas
       - name: Run Feed generator
         run: |
-          python file-editor.py $GITHUB_REPOSITORY
-          pwd
-          ls -ahlR
+          python file-editor.py ritu
           echo $GITHUB_REPOSITORY
       # - name: push repo
       #   run: |
