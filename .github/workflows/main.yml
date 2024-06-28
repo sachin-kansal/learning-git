@@ -2,7 +2,7 @@ name: myfirstworkflow
 on: [create]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: checkout repo
         uses: actions/checkout@v3
@@ -14,7 +14,6 @@ jobs:
         run: |
           python - pip install --upgrade pip
           pip install pyyaml pandas
-      - uses: actions/checkout@v2
       - name: Run Feed generator
         run: |
           python file-editor.py $GITHUB_REPOSITORY
