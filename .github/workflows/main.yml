@@ -3,6 +3,9 @@ on: [create]
 jobs:
   build:
     runs-on: windows-latest
+    permissions:
+      actions: read
+      contents: write
     steps:
       - name: checkout repo
         uses: actions/checkout@v3
